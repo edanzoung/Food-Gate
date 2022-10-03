@@ -1,0 +1,16 @@
+html {
+    background-color: rgb(80, 80, 80);
+}
+
+body {
+    background-color: rgb(80, 80, 80);
+}
+#navigation{
+    z-index: 10000;
+    position: sticky;
+    top:0;
+}
+#body{
+    position: relative;
+    top:0px;
+}

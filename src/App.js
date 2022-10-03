@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import HomeContent from './Pages/Home.js';
+import AboutContent from './Pages/About.js';
+import ContactContent from './Pages/Contact.js';
+import CartContent from './Pages/Cart.js';
+import { ShopContent } from './Pages/Shop.js';
+import ShopDetailContent from './Pages/Shopdetail.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Products } from './Pages/Shop.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.prod = { 'prodData': Products };
+  }
+
+
+  render() {
+    return (
+      <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HomeContent />} />
+            <Route path="/about" element={<AboutContent />} />
+            <Route path="/contact" element={<ContactContent />} />
+            <Route path="/cart" element={<CartContent />} />
+            <Route path="/shop" element={<ShopContent />} />
+            <Route path="/detailshop/:id" element={<ShopDetailContent prodData={this.prod.prodData} />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    );
+  }
 }
 
-export default App;
+export {App};

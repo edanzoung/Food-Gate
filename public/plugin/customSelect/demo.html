@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>jQuery Custom Select Generator Example</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href="customSelect.jquery.css" />
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="customSelect.jquery.min.js"></script>
+
+		<style type="text/css">
+			body{font-family:"Roboto"; background-color: #fafafa;}
+			.container { margin: 150px auto; max-width: 400px; }
+			h1 { text-align: center; }
+			#contactform{box-sizing:border-box;}
+			#contactform h2{text-align:center;font-weight:500;font-size:32px;color:#636363;}
+			#contactform p.input{margin-top:20px;}
+			#contactform input,#contactform textarea{width:100%;box-sizing:border-box;padding:5px 10px;}
+			#contactform textarea{max-width:100%;height:100px;}
+			#contactform input.button{background:#52b2ff;color:#FFF;border:0;padding:9px 0px;text-transform:uppercase;cursor:pointer;}
+			#contactform input.button:hover, #contactform input.button:active{background:#1f81d0;}
+			#currentValue{margin-top:20px;text-align:center;font-size:25px;}
+
+			#jqcs_s_demo{height:35px;margin-top:20px;}
+			#jqcs_o_demo .jqcs_option, #jqcs_s_demo .jqcs_option{background-repeat:no-repeat;background-size:23px 17px; background-position:5px center; padding: 2.5px 10px 2.5px 35px;}
+		</style>
+	</head>
+	<body>
+		<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/form/Select-Option-Icons-customSelect.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+		<div class="container">
+			<h1>jQuery Custom Select Generator Example</h1>
+		<div id="contactform">
+			<form action="" method="">
+				<p class="input"><input type="text" placeholder="Name and Surname" value="" /></p>
+				<input type="hidden" id="countrySelect" value=""/>
+				<p class="input"><input type="text" placeholder="+44 6..." value="" /></p>
+				<p class="input"><textarea></textarea></p>
+				<p class="input"><input type="submit" class="button" value="Submit" /></p>
+			</form>
+			<p id="currentValue">Current value is: ''</p>
+		</div>
+	</div>
+		<script type="text/javascript">
+			(function($){
+				$.customSelect({
+					identifier: 'demo',
+					selector: '#countrySelect',
+					placeholder: 'Select your country',
+					options: [
+						['ct', 'ct.png', 'Catalonia'],
+						['es', 'es.png', 'Spain'],
+						['gb', 'gb.png', 'Great Britain'],
+						['de', 'de.png', 'Germany'],
+						['it', 'it.png', 'Italy'],
+						['fi', 'fi.png', 'Finland'],
+						['fr', 'fr.png', 'France']
+					],
+					template: "<div class='jqcs_option' data-select-value='$0' style='background-image:url(example_icons/$1);'>$2</div>"
+				});
+
+
+				//Just to display the country selected (stored in a hidden input)
+				$(window).click(function(e){
+					$('#currentValue').html('Current value is: \''+ $('input#countrySelect')[0].value +'\'');
+				});
+			})(jQuery);
+
+
+
+		</script>
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
+
