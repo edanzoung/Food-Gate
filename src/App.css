@@ -512,7 +512,7 @@ left: 8px;
 
 /*** Hero Header ***/
 .hero-header {
-  background: linear-gradient(rgb(0, 0, 0), rgba(58, 64, 143, 0.527)), url(../public/img/bg-hero.jpg);
+  background: linear-gradient(rgb(0, 0, 0), rgba(58, 64, 143, 0.527)), url(./img/bg-hero.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
