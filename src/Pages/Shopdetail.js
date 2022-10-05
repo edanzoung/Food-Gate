@@ -1,5 +1,5 @@
 import React from 'react';
-import './Shopdetail.css';
+import '../Shopdetail.css';
 import { useParams } from "react-router-dom";
 import Appbar from '@material-ui/core/AppBar';
 import Navbar from './Navbar';

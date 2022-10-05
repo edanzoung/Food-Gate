@@ -36,7 +36,7 @@ function AboutContent() {
                             </div>
                         </div>
                         <div className="col-lg-6 text-center">
-                            <h3 className="section-title ff-secondary text-center text-danger fw-normal">Qui Sommes Nous ?</h3>
+                            <h3 className="section-title ff-secondary text-center text-danger mt-4">Qui Sommes Nous ?</h3>
                             <h5 className="mb-4 ff-secondary">Bienvenue à &nbsp;&nbsp;<i className="fa fa-utensils text-danger me-2"></i>&nbsp;&nbsp;FOOD'S GATE</h5>
                             <p className="mb-4">Nous avons une mission. Notre ambition est de rendre vos restaurants et vos points de vente aussi proche de vous que possible. </p>
                             <div className="row g-4 mb-4">
@@ -53,8 +53,8 @@ function AboutContent() {
                                     <div className="d-flex align-items-center border-start border-5 border-primary px-3">
                                         <h1 className="flex-shrink-0 display-5 text-danger mb-0" data-toggle="counter-up">+50&nbsp;</h1>
                                         <div className="ps-4">
-                                            <h6 className="text-uppercase mb-0">Maîtres Chefs</h6>
-                                            <p className="mb-0">Populaires</p>
+                                            <h6 className="text-uppercase mb-0">Restaurants</h6>
+                                            <p className="mb-0">& Points De Vente</p>
                                         </div>
                                     </div>
                                 </div>

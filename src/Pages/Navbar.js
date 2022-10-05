@@ -61,7 +61,8 @@ function Navbar() {
       </nav>
       <div className="social">
         <div className="list-button">
-          <Button className="register btn btn-sm" variant="contained" >Se Connecter</Button>
+          <Button onClick={() => { navigate('/login') }} className="register btn btn-sm" 
+          variant="contained" >Se Connecter</Button>
           <Button className="bag btn btn-sm" variant="contained" ><ShoppingCartIcon /> <span className="count badge badge-dark">0</span></Button>
         </div>
       </div>
